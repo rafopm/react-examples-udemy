@@ -1,27 +1,22 @@
 import React, { useState, useEffect } from "react";
 import "./useStateEjemplo.css";
+import img from "../assets/img"
 
 function UseStateEjemplo() {
-  const fotos = [
-    "https://images.dog.ceo/breeds/sharpei/noel.jpg",
-    "https://images.dog.ceo/breeds/spaniel-cocker/n02102318_14794.jpg",
-    "https://images.dog.ceo/breeds/terrier-kerryblue/n02093859_2202.jpg",
-  ];
-
-  const [imagen, setImagen] = useState(fotos[0]);
+  const [imagen, setImagen] = useState(img[0].ruta);
   const [inputText, setInputText] = useState("");
   const [mensaje, setMensaje] = useState("Se mostró el perrito")
 
   function mostrarImagen1() {
-    setImagen(fotos[0]);
+    setImagen(img[0].ruta);
   }
 
   function mostrarImagen2() {
-    setImagen(fotos[1]);
+    setImagen(img[1].ruta);
   }
 
   function mostrarImagen3() {
-    setImagen(fotos[2]);
+    setImagen(img[2].ruta);
   }
 
 useEffect(() => {
@@ -39,14 +34,14 @@ useEffect(() => {
       <input type="text" onChange={(e) => setInputText(e.target.value)} placeholder="Escribe aquí"/>
       <div>Resultado: {inputText}</div>
       <div>
-        {imagen !== fotos[0] && (
-          <button onClick={() => mostrarImagen1()}>Sharpei</button>
+        {imagen !== img[0].ruta && (
+          <button onClick={() => mostrarImagen1()}>{img[0].nombre}</button>
         )}
-        {imagen !== fotos[1] && (
-          <button onClick={() => mostrarImagen2()}>Cocker</button>
+        {imagen !== img[1].ruta && (
+          <button onClick={() => mostrarImagen2()}>{img[1].nombre}</button>
         )}
-        {imagen !== fotos[2] && (
-          <button onClick={() => mostrarImagen3()}>Terrier</button>
+        {imagen !== img[2].ruta && (
+          <button onClick={() => mostrarImagen3()}>{img[2].nombre}</button>
         )}
       </div>
 

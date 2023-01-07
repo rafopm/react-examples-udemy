@@ -1,4 +1,4 @@
-export default [
+ const images = [
     {
         "ruta": "https://images.dog.ceo/breeds/retriever-flatcoated/n02099267_3611.jpg",
         "nombre": "Retriever"
@@ -17,3 +17,5 @@ export default [
     }
 
 ]
+
+export default images;

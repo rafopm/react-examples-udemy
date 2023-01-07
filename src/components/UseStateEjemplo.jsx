@@ -28,24 +28,26 @@ useEffect(() => {
 
 
   return (
-    <div className="App">
+    <div className="container-sm">
       <hr></hr>
       <h2>Ejemplos de useState y useEffect</h2>
       <input type="text" onChange={(e) => setInputText(e.target.value)} placeholder="Escribe aquí"/>
       <div>Resultado: {inputText}</div>
+      <hr></hr>
+      <h2>Cambia de perro</h2>
       <div>
         {imagen !== img[0].ruta && (
-          <button onClick={() => mostrarImagen1()}>{img[0].nombre}</button>
+          <button onClick={() => mostrarImagen1()} className="btn btn-primary">{img[0].nombre}</button>
         )}
         {imagen !== img[1].ruta && (
-          <button onClick={() => mostrarImagen2()}>{img[1].nombre}</button>
+          <button onClick={() => mostrarImagen2()} className="btn btn-danger">{img[1].nombre}</button>
         )}
         {imagen !== img[2].ruta && (
-          <button onClick={() => mostrarImagen3()}>{img[2].nombre}</button>
+          <button onClick={() => mostrarImagen3()} className="btn btn-warning">{img[2].nombre}</button>
         )}
       </div>
-
-      <img src={imagen} className="perritos" alt="Imagen de Perro" srcset="" />
+      <hr></hr>
+      <img src={imagen} className="perritos" alt="Imagen de Perro"/>
       <div>{mensaje}</div>
     </div>
   );

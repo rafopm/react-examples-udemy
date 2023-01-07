@@ -1,7 +1,7 @@
 import React from "react";
 
 function EjemplosInicio() {
-  const element = <h3>{2 + 2}</h3>;
+  const element = 2 + 2;
 
   const numeros = [1, 1, 3, 5, 7];
 
